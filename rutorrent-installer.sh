@@ -822,7 +822,7 @@ buildRtorrent() {
 	fi
 	checkoutAndBuild "xmlrpc-c" "$XMLRPC_SVN_DIR" "--disable-cplusplus"
 	downloadAndBuild "libtorrent" "$LIBTORRENT_URL $LIBTORRENT_URL2" "$LIBTORRENT_NAME" "" patchLibtorrent
-	downloadAndBuild "rtorrent" "$RTORRENT_URL $RTORRENT_URL2" "$RTORRENT_NAME" "--with-xmlrpc-c" ""
+	downloadAndBuild "rtorrent" "$RTORRENT_URL $RTORRENT_URL2" "$RTORRENT_NAME" "--enable-ipv6 --with-xmlrpc-c" ""
 }
 
 patchLibtorrent() {
